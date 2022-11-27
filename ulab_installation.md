@@ -8,9 +8,9 @@
 4. Open Thonny.
 5. Write a simple test demo:
 
-> from ulab import numpy as np
-> x = np.ones(5)
-> print(x)
+  from ulab import numpy as np
+  x = np.ones(5)
+  print(x)
 
 If this code works, you have a working micropython firmware with ulab.
 
