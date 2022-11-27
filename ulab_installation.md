@@ -7,11 +7,11 @@
 3. Drag and drop the micropython UF2 file into onto the RPI-RP2 volume. Your pico will reboot. You are now running micropython with ulab in your pico.
 4. Open Thonny.
 5. Write a simple test demo:
-
+```
   from ulab import numpy as np
   x = np.ones(5)
   print(x)
-
+```
 If this code works, you have a working micropython firmware with ulab.
 
 To do (27.11.2022):
