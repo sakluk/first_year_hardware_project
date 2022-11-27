@@ -1,16 +1,27 @@
 # ulab installation
 
-In this document we study how we can install [ulab](https://github.com/v923z/micropython-ulab), a numpy-like array manipulation library for micropython. Please, first read [the Firmware chapter](https://github.com/v923z/micropython-ulab#firmware) from ulab documentation. At this moment (27.11.2022) there are no ready compilations of ulab to RP2 (Raspberry Pi Pico), but the documentation [contains instructions how compile ulab to RP2-based boards](https://github.com/v923z/micropython-ulab#firmware).
+[ulab](https://github.com/v923z/micropython-ulab) is a numpy-like array manipulation library for micropython. It is not included in the standard micropython firmware installed with [Thonny's Interpreter](https://github.com/thonny/thonny/wiki/MicroPython#firmware-installation--upgrade). In order to have ulab working for your RP2 board, you need to install a [special firmware](https://github.com/v923z/micropython-builder/releases) manually on your RP2 boards. Here are quick instructions.
 
-## Compile and build the micropython code
+1. Push and hold the BOOTSEL button and plug your Pico into the USB board. It will mount as a mass storage device called RPI-RP2 to your computer.
+2. Copy the PICO.uf2 file from the [ulab micropython releases](https://github.com/v923z/micropython-builder/releases).
+3. Drag and drop the micropython UF2 file into onto the RPI-RP2 volume. Your pico will reboot. You are now running micropython with ulab in your pico.
+4. Open Thonny.
+5. Write a simple test demo:
 
-We start by learning how to [compile and build the micropython code](https://docs.micropython.org/en/latest/develop/gettingstarted.html#compile-and-build-the-code).
+> from ulab import numpy as np
+> x = np.ones(5)
+> print(x)
 
-1. [Get the code](https://docs.micropython.org/en/latest/develop/gettingstarted.html#get-the-code)
-  - Follow the given instructions. Notice that you need to open command prompt and change to the directory where you want to clone the repository (for example Documents/github) before you give the clone command (git clone https://github.com/<your-user-name>/micropython)
-  - For the development, I created a branch: git checkout -b dev-ulab
-2. Compile and build the code
-  - We are aiming to compile the code for [RP2 board](https://docs.micropython.org/en/latest/rp2/quickref.html).
-    - To Do: Check what are the required dependencies for [RP2 board](https://github.com/micropython/micropython/tree/master/ports/rp2).
-3. Building the MicroPython cross-compiler
-  - To Do: Got an error: 'make' is not recognized as an internal or external command, operable program or batch file. => Need to install and check needed compilers.
+If this code works, you have a working micropython firmware with ulab.
+
+To do (27.11.2022):
+- Check if Pico Wireless works with micropython with ulab firmware.
+
+More info:
+- [ulab micropython builder](https://github.com/v923z/micropython-builder)
+- [Drag and drop micropython](https://www.raspberrypi.com/documentation/microcontrollers/micropython.html#drag-and-drop-micropython)
+- [ulab - firmware](https://github.com/v923z/micropython-ulab#firmware)
+- [Thonny - micropython firmware installation upgrade](https://github.com/thonny/thonny/wiki/MicroPython#firmware-installation--upgrade)
+- [ulab - how to compile ulab to RP2-based boards](https://github.com/v923z/micropython-ulab#firmware).
+
+
