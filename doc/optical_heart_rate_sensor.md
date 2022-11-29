@@ -12,8 +12,8 @@ In [Techatronics' pages](https://techatronic.com/pulse-sensor-heart-beat-sensor/
 
 References:
 
-- [1]: [Crowtail - Pulse Sensor 2.0](https://www.elecrow.com/crowtail-pulse-sensor-p-1673.html)
-- [2]: [Crowtail - Pulse Sensor wikipage](https://www.elecrow.com/wiki/index.php?title=Crowtail-_Pulse_Sensor)
+[1]: Crowtail - Pulse Sensor 2.0(https://www.elecrow.com/crowtail-pulse-sensor-p-1673.html)
+[2]: Crowtail - Pulse Sensor wikipage(https://www.elecrow.com/wiki/index.php?title=Crowtail-_Pulse_Sensor)
 - [3]: [T.K. Hareendran, Pulse Rate Sensor](https://www.electroschematics.com/heart-rate-sensor/)
 - [4]: [Pulse Sensor Getting Started Guide](https://cdn.shopify.com/s/files/1/0672/9409/files/PulseSensorAmpedGettingStartedGuide.pdf)
 - [5]: [Eagle PCB design software for everyone, free download](https://www.autodesk.com/products/eagle/free-download)
