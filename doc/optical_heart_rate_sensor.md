@@ -12,14 +12,15 @@ In [Techatronics' pages](https://techatronic.com/pulse-sensor-heart-beat-sensor/
 
 References:
 
-- [Crowtail - Pulse Sensor 2.0](https://www.elecrow.com/crowtail-pulse-sensor-p-1673.html)
-- [Crowtail - Pulse Sensor wikipage](https://www.elecrow.com/wiki/index.php?title=Crowtail-_Pulse_Sensor)
-- [T.K. Hareendran, Pulse Rate Sensor](https://www.electroschematics.com/heart-rate-sensor/)
-- [Pulse Sensor Getting Started Guide](https://cdn.shopify.com/s/files/1/0672/9409/files/PulseSensorAmpedGettingStartedGuide.pdf)
-- [Eagle PCB design software for everyone, free download](https://www.autodesk.com/products/eagle/free-download)
-- [Altium 365 Viewer - Electronic Designs Online](https://www.altium.com/viewer/)
-- [What is pulse sensor and its working - Heart Beat Sensor](https://techatronic.com/pulse-sensor-heart-beat-sensor/)
+- [1]: [Crowtail - Pulse Sensor 2.0](https://www.elecrow.com/crowtail-pulse-sensor-p-1673.html)
+- [2]: [Crowtail - Pulse Sensor wikipage](https://www.elecrow.com/wiki/index.php?title=Crowtail-_Pulse_Sensor)
+- [3]: [T.K. Hareendran, Pulse Rate Sensor](https://www.electroschematics.com/heart-rate-sensor/)
+- [4]: [Pulse Sensor Getting Started Guide](https://cdn.shopify.com/s/files/1/0672/9409/files/PulseSensorAmpedGettingStartedGuide.pdf)
+- [5]: [Eagle PCB design software for everyone, free download](https://www.autodesk.com/products/eagle/free-download)
+- [6]: [Altium 365 Viewer - Electronic Designs Online](https://www.altium.com/viewer/)
+- [7]: [What is pulse sensor and its working - Heart Beat Sensor](https://techatronic.com/pulse-sensor-heart-beat-sensor/)
 - [APDS-9008, Miniature Surface-Mount Ambient Light Photo Sensor - datasheet](https://www.elecrow.com/wiki/images/d/dc/APDS-9008-020-Avago.pdf).
-- [NI's Multisim circuit simulation model for Crowtail's Pulse Sensor](https://github.com/sakluk/first_year_hardware_project/tree/main/circuit)
-- [New High Performance Optical Sensor for Heart Rate Monitoring Ideal for Wearables](https://www.rohm.com/news-detail?news-title=new-high-performance-optical-sensor-for-heart-rate-monitoring&defaultGroupId=false). Rohm Semiconductors.
-- Ted Burke (2019). [€5 PPG – photoplethysmogram amplifier]
+- [8]: [NI's Multisim circuit simulation model for Crowtail's Pulse Sensor](https://github.com/sakluk/first_year_hardware_project/tree/main/circuit)
+- [9]: [New High Performance Optical Sensor for Heart Rate Monitoring Ideal for Wearables](https://www.rohm.com/news-detail?news-title=new-high-performance-optical-sensor-for-heart-rate-monitoring&defaultGroupId=false). Rohm Semiconductors.
+- [10]: Burke, T. (2019). [€5 PPG – photoplethysmogram amplifier]
+- [11]: Ngueyn, W & Horjus, R. (2011). [Heart-Rate Monitoring Control System Using Photoplethysmography (PPG)](https://core.ac.uk/download/pdf/19143551.pdf)
