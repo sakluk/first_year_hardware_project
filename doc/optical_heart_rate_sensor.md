@@ -1,6 +1,6 @@
 # Optical heart rate sensor
 
-We use Elecrow's [Crowtail - Pulse Sensor 2.0](https://www.elecrow.com/crowtail-pulse-sensor-p-1673.html) which is very sensitive to proper positioning, body movements and external conditions. For example, if the skin contact is loose, it easily picks up the 50 Hz flickering from the ambient room lighting.
+We use Elecrow's [Crowtail - Pulse Sensor 2.0][1] which is very sensitive to proper positioning, body movements and external conditions. For example, if the skin contact is loose, it easily picks up the 50 Hz flickering from the ambient room lighting.
 
 It is recommended first to test and try which sensing location gives the best signal. Based on our experiments the front head, check and chest have given best results. The pulse signal from the finger tip or wrist might be difficult to measure.
 
