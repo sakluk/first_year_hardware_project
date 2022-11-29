@@ -14,6 +14,7 @@ More reading:
 
 - [New High Performance Optical Sensor for Heart Rate Monitoring Ideal for Wearables][10] by Rohm Semiconductors.
 - Ngueyn, W & Horjus, R. (2011). [Heart-Rate Monitoring Control System Using Photoplethysmography (PPG)][12]
+- Analog Engineer's Circuit: Amplifiers (2018). [Photodiode amplifier circuit][13]. Texas Instruments.
 
 [1]: https://www.elecrow.com/crowtail-pulse-sensor-p-1673.html (Crowtail - Pulse Sensor 2.0)
 
@@ -35,6 +36,8 @@ More reading:
 
 [10]: https://www.rohm.com/news-detail?news-title=new-high-performance-optical-sensor-for-heart-rate-monitoring&defaultGroupId=false (New High Performance Optical Sensor for Heart Rate Monitoring Ideal for Wearables)
 
-[11]: https://batchloaf.wordpress.com/2019/04/04/e5-ppg-photoplethysmogram-amplifier-arduino-circuit/ (Burke, T. (2019). €5 PPG – photoplethysmogram amplifier)
+[11]: https://batchloaf.wordpress.com/2019/04/04/e5-ppg-photoplethysmogram-amplifier-arduino-circuit/ (Burke, T. 2019. €5 PPG – photoplethysmogram amplifier)
 
 [12]: https://core.ac.uk/download/pdf/19143551.pdf
+
+[13]: https://www.ti.com/lit/an/sboa220a/sboa220a.pdf
