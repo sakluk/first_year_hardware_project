@@ -14,10 +14,10 @@ References:
 
 - [Crowtail - Pulse Sensor 2.0](https://www.elecrow.com/crowtail-pulse-sensor-p-1673.html)
 - [Crowtail - Pulse Sensor wikipage](https://www.elecrow.com/wiki/index.php?title=Crowtail-_Pulse_Sensor)
-- T.K.Hareendran [Pulse Rate Sensor](https://www.electroschematics.com/heart-rate-sensor/). www.electroschematics.com
+- [T.K. Hareendran, Pulse Rate Sensor](https://www.electroschematics.com/heart-rate-sensor/). electroschematics.com.
 - [Pulse Sensor Getting Started Guide](https://cdn.shopify.com/s/files/1/0672/9409/files/PulseSensorAmpedGettingStartedGuide.pdf). cdn.shopify.com.
-- [Eagle PCB design software for everyone, free download](https://www.autodesk.com/products/eagle/free-download). www.autodesk.com.
-- [Altium 365 Viewer - Electronic Designs Online](https://www.altium.com/viewer/). www.altium.com.
-- [What is pulse sensor and its working - Heart Beat Sensor](https://techatronic.com/pulse-sensor-heart-beat-sensor/). www.techatronic.com.
+- [Eagle PCB design software for everyone, free download](https://www.autodesk.com/products/eagle/free-download). autodesk.com.
+- [Altium 365 Viewer - Electronic Designs Online](https://www.altium.com/viewer/). altium.com.
+- [What is pulse sensor and its working - Heart Beat Sensor](https://techatronic.com/pulse-sensor-heart-beat-sensor/). techatronic.com.
 - [APDS-9008, Miniature Surface-Mount Ambient Light Photo Sensor - datasheet](https://www.elecrow.com/wiki/images/d/dc/APDS-9008-020-Avago.pdf).
 - [NI's Multisim circuit simulation model for Crowtail's Pulse Sensor](https://github.com/sakluk/first_year_hardware_project/tree/main/circuit)
