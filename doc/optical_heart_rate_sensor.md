@@ -22,3 +22,4 @@ References:
 - [APDS-9008, Miniature Surface-Mount Ambient Light Photo Sensor - datasheet](https://www.elecrow.com/wiki/images/d/dc/APDS-9008-020-Avago.pdf).
 - [NI's Multisim circuit simulation model for Crowtail's Pulse Sensor](https://github.com/sakluk/first_year_hardware_project/tree/main/circuit)
 - [New High Performance Optical Sensor for Heart Rate Monitoring Ideal for Wearables](https://www.rohm.com/news-detail?news-title=new-high-performance-optical-sensor-for-heart-rate-monitoring&defaultGroupId=false). Rohm Semiconductors.
+- Ted Burke (2019). [€5 PPG – photoplethysmogram amplifier]
