@@ -1,5 +1,5 @@
 """
-09_button_reader.py
+10_full_configuration.py
 
 First year hardware project
 School of ICT
@@ -7,8 +7,13 @@ Metropolia University of Applied Sciences
 3.12.2022, Sakari Lukkarinen
 
 
-This demo
-- reads the microbuttons
+This demo combines all the codes used so far.
+- Reads the analog signal
+- Scales it to fit into to the OLED display
+- Reads buttons and rotary encoder
+- Blinks LEDs when microbuttons are pressed
+Notes
+- There comes several interruptions when microbuttons are pressed.
 """
 
 # Import libaries
@@ -115,7 +120,7 @@ but1.irq(button_1, Pin.IRQ_FALLING)
 but2.irq(button_2, Pin.IRQ_FALLING)
 
 
-# Scaler for display
+# Scaler function to display the signal on the OLED
 def scale_signal_for_display(x):
     global gain, offset
     # Scale and offset are given in scale 2**16 = 65536
@@ -127,7 +132,7 @@ def scale_signal_for_display(x):
     y = min(y, 64)
     return y
 
-# Updates the signal graph in OLED
+# Displays and updates the graph shown on the OLED
 def display_signal(y):
     global x0, y0, n
     # Take the modulus
@@ -137,7 +142,7 @@ def display_signal(y):
         oled.fill(0)
         x0 = 0
     # Draw a line segment
-    # Turn the y-axis upside down, as the origio (0,0) is in upper left corner
+    # Turn the y-axis upside down, as the origio (0,0) is in the upper left corner
     oled.line(x0, 64-y0, x, 64-y, 1)
     oled.show()
     # Update line segment starting point
@@ -147,24 +152,24 @@ def display_signal(y):
 
 # Settings for sampling
 fs = 100 # Sampling frequency (Hz)
-gain = 2 # for scaling raw uint16 analog input
-offset = 46000 # for offset raw uint16 analog input
+gain = 2 # for scaling raw analog signal
+offset = 46000 # for offsettin raw analog signal
+
+# Initial values for graphing
+x0, y0, n = 0, 0, 0
 
 # Continue until stopped
-x0, y0, n = 0, 0, 0
 while True:
     # Read the analog signal
     y_raw = adc0.read_u16()
-    n = n + 1
-    
-    # Scale the signal down to scale from 0 to 64
+    # Increase number of values read
+    n += 1
+    # Scale the signal down to scale between 0 and 64
     y = scale_signal_for_display(y_raw)    
-
     # Show the signal on the OLED
     display_signal(y)
-
     # Print the value (for debugging)
     # print(y)
  
-    # Sleep 100 ms
+    # Sleep for the sampling period time
     utime.sleep(1/fs)
