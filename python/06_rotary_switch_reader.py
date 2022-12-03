@@ -11,10 +11,8 @@ Metropolia University of Applied Sciences
 
 
 This demo
-- uses interrupts to read the changes in the rotary encoder
-- increases or decreases the value of a variable depending in which directon the rotary encoder is turned
-- displays the current value of the variable
-You can activate the plotter (View > Plotter) to show graphically the values.
+- uses interrupts to read the rotary knobs button
+- display OK when pressed
 """
 
 # Import libaries
@@ -26,44 +24,19 @@ C_LEFT = 10
 C_RIGHT = 11
 C_SWITCH = 12
 
-# Pins for the coder
-p1 = Pin(C_LEFT, Pin.IN)
-p2 = Pin(C_RIGHT, Pin.IN)
-p3 = Pin(C_SWITCH, Pin.IN)
+# Connect switch to pin, use pull-up
+# resistor, default value is 1
+# When the knob switch is pressed the value
+# changes to 0
+p3 = Pin(C_SWITCH, Pin.IN, Pin.PULL_UP)
 
 def switch_pressed(pin):
     print('OK')
-    
-# Coder function
-def decode(pin):
-    global a0, b0, i
-    # Read the pin values
-    a = p1.value()
-    b = p2.value()
-    # Knob is turned left
-    if a0 != a:
-        i = i - 1
-        a0 = a
-    # Knob is turned right
-    if b0 != b:
-        i = i + 1
-        b0 = b
-    # Print the variable
-    print(i)    
 
-# Initialize global variables
-a0, b0, c0, i = 0, 0, 0, 0
-
-# Activate interruptions
-p1.irq(decode, Pin.IRQ_FALLING)
-p2.irq(decode, Pin.IRQ_FALLING)
+# Activate interruption
+p3.irq(switch_pressed, Pin.IRQ_FALLING)
 
 # Continue until stopped
 while True:
-    # Read switch button
-    c = p3.value()
-    if c != c0:
-        print(c)
-        c0 = c
     # Sleep 100 ms
     utime.sleep_ms(100)
