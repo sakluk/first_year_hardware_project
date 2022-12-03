@@ -14,3 +14,5 @@ This folder contains micropython codes for the protoboard.
 - [06_rotary_switch_reader.py](06_rotary_switch_reader.py) - Reads the rotary switch knob button
 - [07_oled_test.py](07_oled_test.py) - Displays text and draw rectangles to the OLED display
 - [08_heart_beat_grapher.py](08_heart_beat_grapher.py) - Reads the PPG signal and draws it graphically to OLED display
+- [09_button_reader.py](09_button_reader.py) - Reads the microbuttons
+- [10_full_configuration.py](10_full_configuration.py) - Combines all codes used on previous examples
