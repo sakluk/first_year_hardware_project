@@ -10,8 +10,9 @@ Metropolia University of Applied Sciences
 This demo combines all the codes used so far.
 - Reads the analog signal
 - Scales it to fit into to the OLED display
-- Reads buttons and rotary encoder
-- Blinks LEDs when microbuttons are pressed
+- Rotary encoder is used to increase or decrease the gain
+- Pressing the rotary encode button, resets the gain to the value of 2
+- Pressing microbuttons changes the offset
 Notes
 - There comes several interruptions when microbuttons are pressed.
 """
@@ -73,22 +74,21 @@ but2 = Pin(SW_2, Pin.IN, Pin.PULL_UP)
 
 
 # Template function for rotary coder
-RC_L, RC_R, RC_I = 0, 0, 0
+RC_L, RC_R = 0, 0
 def decode(pin):
-    global RC_L, RC_R, RC_I
+    global RC_L, RC_R, gain
     # Read the pin values
     a = rc_left.value()
     b = rc_right.value()
     # Knob is turned left
     if a != RC_L:
-        RC_I -= 1
+        gain *= 0.9
         RC_L = a
     # Knob is turned right
     if b != RC_R:
-        RC_I += 1
+        gain *= 1.1
         RC_R = b
-    # Print the value
-    print(f'Rotary coder value: {RC_I}')
+    print(f'gain = {gain:.2f}')
 
 # Activate interruptions for rotary coder
 rc_left.irq(decode, Pin.IRQ_FALLING)
@@ -96,23 +96,28 @@ rc_right.irq(decode, Pin.IRQ_FALLING)
 
 # Template function for rotary encoder button
 def rc_button_pressed(pin):
-    print('Rotary coder button pressed.')
+    global gain
+    gain = 2
+    print(f'gain = {gain:.2f}')
 
 # Activate interruption for rotary encoder button
 rc_button.irq(rc_button_pressed, Pin.IRQ_FALLING)
 
 # Template functions for microbuttons
 def button_0(pin):
-    print('Button 0 pressed.')
-    led0.toggle()
+    global offset
+    offset -= 1000
+    print(f'Offset: {offset}')
     
 def button_1(pin):
-    print('Button 1 pressed.')
-    led1.toggle()
+    global offset
+    offset = 21000
+    print(f'Offset: {offset}')
     
 def button_2(pin):
-    print('Button 2 pressed.')
-    led2.toggle()
+    global offset
+    offset += 1000
+    print(f'Offset: {offset}')
 
 # Activate interruptions for microbuttons
 but0.irq(button_0, Pin.IRQ_FALLING)
@@ -125,7 +130,7 @@ def scale_signal_for_display(x):
     global gain, offset
     # Scale and offset are given in scale 2**16 = 65536
     # Then scale down to 2**6 = 64
-    y = (gain*x - offset) // 1024
+    y = int((gain*(x - offset)) // 1024)
     # Limit low values to 0
     y = max(y, 0)
     # Limit high values to 64
@@ -149,14 +154,37 @@ def display_signal(y):
     x0 = x
     y0 = y
 
+def display_start_message():
+    oled.fill(0)
+    # Write text to OLED
+    oled.text('Hardware project', 1, 1)
+    oled.text('School of ICT', 1, 11)
+    oled.text('Metropolia UAS', 1, 21)
+    oled.text('3.12.2022', 1, 31)
+    #oled.text('----------------', 1, 41)
+    oled.text('Welcome!', 1, 48)
+    # Draw rectangles around the last numbers
+    oled.rect(0, 41, 128, 23, 2)
+    oled.rect(0, 42, 128, 21, 2)
+    oled.show()
+    # Wait for 5 seconds
+    utime.sleep(5)
+    # Clear the display
+    oled.fill(0)
+    oled.show()
+    # Wait for 1 second
+    utime.sleep(1)
 
 # Settings for sampling
 fs = 100 # Sampling frequency (Hz)
 gain = 2 # for scaling raw analog signal
-offset = 46000 # for offsettin raw analog signal
+offset = 21000 # for offset raw analog signal
 
 # Initial values for graphing
 x0, y0, n = 0, 0, 0
+
+# Display the start texts
+display_start_message()
 
 # Continue until stopped
 while True:
