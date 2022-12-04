@@ -2,7 +2,7 @@
 First year hardware project<br>
 School of ICT<br>
 Metropolia University of Applied Sciences<br>
-3.12.2022, Sakari Lukkarinen
+4.12.2022, Sakari Lukkarinen
 
 This folder contains micropython codes for the protoboard.
 
@@ -16,3 +16,4 @@ This folder contains micropython codes for the protoboard.
 - [08_heart_beat_grapher.py](08_heart_beat_grapher.py) - Reads the PPG signal and draws it graphically to OLED display
 - [09_button_reader.py](09_button_reader.py) - Reads the microbuttons
 - [10_full_configuration.py](10_full_configuration.py) - Combines all codes used on previous examples
+- [11_real_time_signal_processing.py](11_real_time_signal_processing.py) - Real-time bandpass filtering (1 - 20 Hz) of the PPG signal
