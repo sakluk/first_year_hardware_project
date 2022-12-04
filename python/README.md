@@ -16,4 +16,4 @@ This folder contains micropython codes for the protoboard.
 - [08_heart_beat_grapher.py](08_heart_beat_grapher.py) - Reads the PPG signal and draws it graphically to OLED display
 - [09_button_reader.py](09_button_reader.py) - Reads the microbuttons
 - [10_full_configuration.py](10_full_configuration.py) - Combines all codes used on previous examples
-- [11_real_time_signal_processing.py](11_real_time_signal_processing.py) - Real-time bandpass filtering (1 - 20 Hz) of the PPG signal
+- [11_real_time_signal_filtering.py](11_real_time_signal_filtering.py) - Real-time bandpass filtering (1 - 20 Hz) of the PPG signal
