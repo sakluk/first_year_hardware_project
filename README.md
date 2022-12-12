@@ -1,5 +1,5 @@
 # First year hardware project
-[Hardware 2 course](https://opinto-opas.metropolia.fi/88094/en/67/70331/3130/2385/62412)<br>
+[Hardware 2 course](https://opinto-opas.metropolia.fi/88094/en/67/70331/3130/0/62412)<br>
 First year studies<br>
 12.12.2022, Sakari Lukkarinen<br>
 [Degree Programme in Information Technology](https://www.metropolia.fi/en/academics/bachelors-degrees/information-technology)<br>
