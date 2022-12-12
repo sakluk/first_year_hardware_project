@@ -35,12 +35,39 @@ from ulab import scipy
 y, zi = scipy.signal.sosfilt(sos, x, zi = zi)
 ```
 
+### Peak detection
 
+> The detection of peaks is based on the AMPD algorithm.
+> It needs the input signal to be linearly detrended, but the use of the input filter of band-pass characteristic with the limiter described in the previous section satisfies this requirement.
+> The AMPD algorithm performs well for the filtered PPG signal, but it is computationally expensive, which can be unacceptable for wearable devices.
+> The need to calculate a large matrix with real-valued elements, where moving windows are used, can be avoided due to the modifications of the algorithm proposed in further parts of this paper.
+> ...
+> From practical observation, it has been inferred that the signal is too noisy, and it is of no use for peak detection and heart rate calculation, when we have the following:
+> $ \lambda > \lambda_max $
+> The value of λmax = 17 was found empirically to be a good choice.
+> To simplify the processing, the authors propose replacing real-valued elements of matrix Mr with the matrix Mr’ containing 1-bit binary values, m’k,i, as follows:
+
+```
+if (x[i-1] > x[i-k-1]) & (x[i-1] > x[i+k-1]):
+  m[k, i] = 0
+else:
+  m[k, i] = 1
+
+s[i] = np.sum(m[k, i], axis = 0)
+```
 
 ## References
+
+Primary
+
+- Wójcikowski and Pankiewicz. (2020). [Photoplethysmographic Time-Domain Heart Rate Measurement Algorithm for Resource-Constrained Wearable Devices and its Implementation](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7146569/). Sensors (Basel).
+- Scholkmann et al. (2012). [An Efficient Algorithm for Automatic Peak Detection in Noisy Periodic and Quasi-Periodic Signals](An Efficient Algorithm for Automatic Peak Detection in Noisy Periodic and Quasi-Periodic Signals). algorithms.
+- Cerina, L. (2017). [Automatic Multiscale-based Peak Detection (AMPD)](https://github.com/LucaCerina/ampdLib) for Python. GitHub.
+
+Secondary
 
 - MATLAB Central (2018). Discussion on [Remove trend and detect peaks in a photoplethysmogram (PPG) signal](https://se.mathworks.com/matlabcentral/answers/380879-remove-trend-and-detect-peaks-in-a-photoplethysmogram-ppg-signal)
 - Liang et al. (2018). [An optimal filter for short photoplethysmogram signals](https://www.nature.com/articles/sdata201876). Nature.
 - Ismail et al. (2021). [Heart rate tracking in photoplethysmography signals affected by motion artifacts: a review](https://asp-eurasipjournals.springeropen.com/articles/10.1186/s13634-020-00714-2). EURASIP Journal on Advances in Signal Processing.
-- Wójcikowski and Pankiewicz. (2020). [Photoplethysmographic Time-Domain Heart Rate Measurement Algorithm for Resource-Constrained Wearable Devices and its Implementation](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7146569/). Sensors (Basel).
+
 - [qppg.m from PhysioNet Cardiovasculat Signal Toolbox, File](https://moodle.frankfurt-university.de/mod/resource/view.php?id=473220)
