@@ -60,6 +60,7 @@ s[i] = np.sum(m[k, i], axis = 0)
 
 Primary
 
+- [Heart rate variability: Standards of measurement, physiological interpretation, and clinical use](https://www.escardio.org/static-file/Escardio/Guidelines/Scientific-Statements/guidelines-Heart-Rate-Variability-FT-1996.pdf). (1996). European Heart Journal, Volume 17, pp. 354-381.
 - Wójcikowski and Pankiewicz. (2020). [Photoplethysmographic Time-Domain Heart Rate Measurement Algorithm for Resource-Constrained Wearable Devices and its Implementation](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7146569/). Sensors (Basel).
 - Scholkmann et al. (2012). [An Efficient Algorithm for Automatic Peak Detection in Noisy Periodic and Quasi-Periodic Signals](An Efficient Algorithm for Automatic Peak Detection in Noisy Periodic and Quasi-Periodic Signals). algorithms.
 - Cerina, L. (2017). [Automatic Multiscale-based Peak Detection (AMPD)](https://github.com/LucaCerina/ampdLib) for Python. GitHub.
