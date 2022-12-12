@@ -1,5 +1,5 @@
 """"
-filter_demo_01
+filter_speed_test
 28.11.2022, Sakari Lukkarinen
 Hardware 2 project
 School of ICT
