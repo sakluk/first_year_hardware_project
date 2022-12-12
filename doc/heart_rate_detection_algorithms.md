@@ -63,6 +63,8 @@ Primary
 - Wójcikowski and Pankiewicz. (2020). [Photoplethysmographic Time-Domain Heart Rate Measurement Algorithm for Resource-Constrained Wearable Devices and its Implementation](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7146569/). Sensors (Basel).
 - Scholkmann et al. (2012). [An Efficient Algorithm for Automatic Peak Detection in Noisy Periodic and Quasi-Periodic Signals](An Efficient Algorithm for Automatic Peak Detection in Noisy Periodic and Quasi-Periodic Signals). algorithms.
 - Cerina, L. (2017). [Automatic Multiscale-based Peak Detection (AMPD)](https://github.com/LucaCerina/ampdLib) for Python. GitHub.
+- Szabolcs and László. (2021). [The minimal sampling frequency of the photoplethysmogram for accurate pulse rate variability parameters in healthy volunteers](https://www.sciencedirect.com/science/article/pii/S1746809421001865). Biomedical Signal Processing and Control, Volume 68.
+Secondary
 
 Secondary
 
